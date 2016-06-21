@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { background-color:lightblue}
+#title {color:darkblue;
+      position: absolute;
+	  display: block;
+	  top: 155px;
+	  left: 210px;
+	  font-size: 18px;
+	  font-weight: bold;}
+p    {color:green}
+
+#topMenuBar{
+	position: absolute;
+	display: block;
+	color: green;
+	background: -moz-linear-gradient(top,#000077,#0000dd); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000077', endColorstr='#0000DD'); /* for IE */
+	top: 0px;
+	left: 20px;
+	width: 980px;
+	height: 54px;
+	z-index: 100;
+	}
+
+#topMenuBarItems{
+	position: absolute;
+	top: 4px;
+	left: 30px;
+	font-family: Helvetica;
+	color: #254117; 
+	font-size: 11px;
+	font-weight: bold;
+	width: 580px;
+	}
+#logoText {
+	position: absolute;
+	display: block;
+	color: white;
+	width: 480px;
+	height: 380px;
+	top: 10px;
+	left: 2px;
+	font-family: Helvetica;
+	font-size: 20px;
+	}
+#tabBar {
+	position: absolute;
+	display: block;
+	top: 30px;
+	left: 560px;
+	width: 500px;
+	height: 6px;
+	z-index: 100;
+	}
+
+#menu1, #menu2, #menu3, #menu4{
+	position: absolute;
+	top: 4px;
+	text-align: center;
+	vertical-align: middle;
+	border-right-style: solid;
+	border-right-width: 0px;
+	border-top-style: solid;
+	border-top-width: 0px;
+	border-color: #330011;
+	width: 100px;
+	height: 20px;
+	background-color: #7080cc;
+	-moz-border-radius: 5px 5px 0px 0px;
+}
+
+#menu1Text, #menu2Text, #menu3Text, #menu4Text{
+	position: absolute;
+	font-size: 12px;
+	font-family: Helvetica;
+	font-style: bold; 
+	color: white;
+}
+
+#menu1 { 	display: block;	left: 10px;	background-color: #d9d9d9;	}
+#menu1Text {	top: 3px;	left: 24px;	color: black;	}	
+
+#menu2 {	display: block;	left: 112px;	}
+#menu2Text {	top: 3px;	left: 30px;	}	
+
+#menu3 {	display: block;	left: 214px;	}
+#menu3Text {	top: 3px;	left: 28px;	}	
+
+#menu4 {	display: block;	left: 316px;	}
+#menu4Text {	top: 3px;	left: 20px;	}	
+
+#supplements
+{
+	position: absolute;
+	display: block;
+	color: blue;
+	width: 400px;
+	height: 380px;
+	top: 150px;
+	left: 120px;
+	font-family: Helvetica;
+	font-size: 18px;
+}
+#aconiteStyle, #bitterOrangeStyle, #chaparralStyle, #colloidalStyle, #coltsfootStyle, #comfreyStyle,
+#countryMallowStyle, #germaniumStyle, #kavaStyle, #lobeliaStyle, #yohimbeStyle, #ginkoStyle
+{
+	position: absolute;
+	display: block;
+	border: solid;
+	border-color: blue;
+	background: -moz-linear-gradient(bottom,lightgrey, white);
+	//background-color:lightgreen;
+	//background-color:lightgrey;
+}
+
+#aconiteStyle
+{	top: 50px; left: 0px; width: 185px; }
+#bitterOrangeStyle 
+{	top: 50px; left: 200px; width: 185px;}
+#chaparralStyle
+{ 	top: 50px; left: 400px; width: 185px;}
+#colloidalStyle
+{	top: 50px; left: 600px; width: 185px;}
+#coltsfootStyle
+{	top: 130px;	left: 0px; width: 185px;}
+#comfreyStyle
+{	top: 130px;	left: 200px; width: 185px;}
+#countryMallowStyle
+{	top: 130px;	left: 400px; width: 185px;}
+#germaniumStyle
+{	top: 130px;	left: 600px; width: 185px;}
+#kavaStyle
+{	top: 210px;	left: 0px; width: 185px;}
+#lobeliaStyle
+{	top: 210px;	left: 200px; width: 185px;}
+#yohimbeStyle
+{	top: 210px;	left: 400px; width: 185px;}
+#ginkoStyle
+{	top: 210px;	left: 600px; width: 185px;}
+
+#CustomerAButton {
+	position: absolute;
+	display: block;
+	top: 350px;
+	left: 5px;
+	font-family: Helvetica;
+	color: #254117;
+	font-size: 18px;
+	}
+
+#CustomerA1Button {
+	position: absolute;
+	display: block;
+	top: 370px;
+	left: 5px;
+	font-family: Helvetica;
+	color: #254117;
+	font-size: 18px;
+	}
+
+#bottomBar{
+	position: absolute;
+	display: block;
+	color: green;
+	background: -moz-linear-gradient(top,#000077,#0000dd); 
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000077', endColorstr='#0000DD'); /* for IE */
+	top: 800px;
+	left: 20px;
+	width: 980px;
+	height: 54px;
+	z-index: 100;
+	}
+
+#bottomBarItems{
+	position: absolute;
+	top: 4px;
+	left: 30px;
+	font-family: Helvetica;
+	color: #254117; 
+	font-size: 11px;
+	font-weight: bold;
+	width: 580px;
+	}
+#bottomText {
+	position: absolute;
+	display: block;
+	color: white;
+	width: 480px;
+	height: 380px;
+	top: 10px;
+	left: 700px;
+	font-family: Helvetica;
+	font-size: 10px;
+	}
+	
+	#bottomText2 {
+	position: absolute;
+	display: block;
+	color: white;
+	width: 480px;
+	height: 380px;
+	top: 10px;
+	left: 0px;
+	font-family: Helvetica;
+	font-size: 10px;
+	}
+
+	#layout {
+	position: absolute;
+	display: block;
+	top: 100px;
+	left: 300px;
+        }
+
+	#customerA {
+	position: absolute;
+	display: none;
+	top: 470px;
+	left: 530px;
+        }
+
+	#customerA1 {
+	position: absolute;
+	display: none;
+	top: 320px;
+	left: 650px;
+        }
+</style>
+</head>
+<body>
+   <div id="title"></div>
+<script src="jquery-2.1.4.js"></script>
+<script>
+  $(function() 
+  {
+     // Hide and then bring back a div
+     //$("#aconiteStyle").hide(3000).show(3000);
+
+     // Slide up and down are very cool - menu options? 
+     $("#bitterOrangeStyle").slideUp(3000).delay(2000).slideDown(3000);
+
+     // FadeToggle - similar to hide and show
+     //$("#comfreyStyle").fadeToggle(3000).fadeToggle(3000);
+
+     // Click a button to change a different element
+     $("#CustomerA1Button").on('click', function()
+	{ 
+           $("#customerA").toggle(2000);
+           $("#customerA1").toggle(2000);
+	});   
+
+     // mouseover a button change a different element
+     $("#CustomerAButton").on('click', function()
+	{ 
+           $("#customerA").toggle(2000);
+	});   
+
+     // Click an element to change it
+     $("#ginkoStyle").on('click', function()
+	{ 
+           $("#ginkoStyle").toggle(1000).toggle(1000);
+	});   
+  });   
+		  
+</script>
+
+  <div id="topMenuBar">
+      <div id="topMenuBarItems">
+         <div id="logoText">KidBrix Monitor</div>
+      </div>
+    </div>
+
+    <div id="tabBar">
+       <div id="menu1" onclick="toggleMenu(1)" onmouseover="togChoiceOn(1)" onmouseout="togChoiceOff(1)">
+         <div id="menu1Text">Negative</div>
+       </div>
+
+       <div id="menu2" onclick="toggleMenu(2)" onmouseover="togChoiceOn(2)" onmouseout="togChoiceOff(2)">
+         <div id="menu2Text">Positive</div>
+       </div>
+
+       <div id="menu3" onclick="toggleMenu(3)" onmouseover="togChoiceOn(3)" onmouseout="togChoiceOff(3)" >
+         <div id="menu3Text">Neutral</div>
+       </div>
+
+       <div id="menu4" onclick="toggleMenu(4)" onmouseover="togChoiceOn(4)" onmouseout="togChoiceOff(4)">
+         <div id="menu4Text">Error Rate</div>
+       </div>
+    </div>
+
+
+      <div id="layout">&nbsp;
+         <img src="images/kidbrixlayout4.png" style="width:500px;height:428px;">
+      </div>   
+      <div id="customerA">&nbsp;
+         <img src="images/reddot.png" style="width:40px;height:40px;">
+      </div>
+      <div id="customerA1">&nbsp;
+         <img src="images/reddot.png" style="width:40px;height:40px;">
+      </div>
+      </div>  
+      
+      <div id="CustomerAButton">
+         <input type="submit" value="CustomerA" border="0">
+      </div>
+       <div id="CustomerA1Button">
+         <input type="submit" value="CustomerA1" border="0">
+      </div>
+      
+        <div id="bottomBar">
+      <div id="bottomBarItems">
+         <div id="bottomText">National Association of Nutrition and Dietetics</div>
+         <div id="bottomText2">Site Map&nbsp;&nbsp;&nbsp;&nbsp;Contact Us&nbsp;&nbsp;&nbsp;&nbsp;Privacy Policy</div>
+      </div>
+       
+    </body>
+</html>
+	
+	
+	
+						
