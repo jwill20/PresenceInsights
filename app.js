@@ -17,7 +17,7 @@
 /*                                                                              */
 /* Interfaces: Invoked by Presence Insights                                     */
 /*             Calls Mobile Application Content Manager                         */
-/*             Send push notification via Mobile First Platform                 */
+/*             Sends push notification via Mobile First Platform                */
 /*                                                                              */
 /* Author:     Jim Williams                                                     */
 /*                                                                              */
@@ -38,7 +38,7 @@ app.use(bodyParser.json()); // for parsing application/json
 /******************************************************/
 /* Set up push notification URL                       */
 /******************************************************/
-var pushHost     = '111.111.111.111';
+var pushHost     = '134.168.21.33';
 var pushPort     = '9080';
 var pushPath     = '/MobileFirstStarter/invoke';
 var pushQString1 = "adapter=PushAdapter&procedure=sendDeviceNotification&parameters=['"
@@ -52,11 +52,11 @@ var pushOffer    = "";
 /******************************************************/
 /* Set up Mobile Application Content Manager URL      */
 /******************************************************/
-var macmHost = "macm.xxxx.xxxxxxxx.com/wps/myportal/vp6991";
+var macmHost = "macm.saas.ibmcloud.com/wps/myportal/vp6991";
 var macmQstring =  "/caas?urile=wcm%3Apath%3Akidbrix%20library/views/all&current=true&ibm.filter.categories.all=kidbrix+library%2fmacm%2ftheme%2fpolice&mime-type=application/json";
 
-var macmUsername = "xxxxxxxxxxxxxxxx";
-var macmPassword = "xxxxxxxxxx";
+var macmUsername = "5613067566776991";
+var macmPassword = "hpwPa_%823";
 
 var macmUrl     = "https://" + macmHost + macmQstring;
 
@@ -128,7 +128,7 @@ app.post('/*', function (PIreq, PIres)
              console.log(fromMACM);
 
              /**********************************************************/
-             /* Set offer based on how the user is                     */
+             /* Set offer based on who the user is                     */
              /**********************************************************/
              if (user == "Bob")
              {
@@ -199,7 +199,7 @@ app.get('/test2', function (req, res)
    res.sendStatus(200);
 });
 /**********************************************/
-/* This is used to see if MACM is responding. */
+/* Use GET to test other function without PI  */
 /**********************************************/
 app.get('/test', function (PIreq, PIres) 
 {
